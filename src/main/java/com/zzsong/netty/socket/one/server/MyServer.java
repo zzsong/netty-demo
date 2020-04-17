@@ -1,6 +1,5 @@
-package com.zzsong.netty.socket.one;
+package com.zzsong.netty.socket.one.server;
 
-import com.sun.corba.se.internal.CosNaming.BootstrapServer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.EventLoopGroup;
@@ -17,12 +16,14 @@ public class MyServer {
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(bossGroup, workGroup)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(null);
+                    .childHandler(new MyServerInitializer());
 
             ChannelFuture future = bootstrap.bind(8989).sync();
+            future.channel().closeFuture().sync();
 
         } finally {
-
+            workGroup.shutdownGracefully();
+            bossGroup.shutdownGracefully();
         }
     }
 }

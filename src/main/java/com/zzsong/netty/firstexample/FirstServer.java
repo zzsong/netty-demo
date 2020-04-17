@@ -10,9 +10,9 @@ public class FirstServer {
 
     /**
      * 服务端流程，基本分三步：
-     *  1、编写服务器
-     *  2、在服务器里面编写业务代码
-     *  3、重写相应事件方法
+     *  1、server
+     *  2、初始化器
+     *  3、handler
      *
      */
     public static void main(String[] args) {
@@ -41,6 +41,10 @@ public class FirstServer {
              *      但是我们可以过一会等它执行完成或者直接注册一个监听，具体的实现就是通过Future和ChannelFutures,
              *      他们可以注册一个监听，当操作执行成功或失败时监听会自动触发。
              *      总之，所有的操作都会返回一个ChannelFuture。
+             */
+            /**
+             * childHandler: 处理workGroup
+             * handler: 处理bossGroup
              */
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(bossGroup, workGroup).channel(NioServerSocketChannel.class)
