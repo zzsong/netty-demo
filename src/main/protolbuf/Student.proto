@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.zzsong.netty.protobuff;
+
+option optimize_for = SPEED ;
+option java_package = "com.zzsong.netty.protobuff";
+option java_outer_classname = "DataInfo";
+
+message Student {
+    string name = 1;
+    int32 id = 2;
+    string email = 3;
+
+}
