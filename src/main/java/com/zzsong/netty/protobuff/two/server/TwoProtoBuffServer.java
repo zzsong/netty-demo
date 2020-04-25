@@ -1,4 +1,4 @@
-package com.zzsong.netty.protobuff.server;
+package com.zzsong.netty.protobuff.two.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -8,7 +8,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
-public class MyProtoBuffServer {
+public class TwoProtoBuffServer {
 
     public static void main(String[] args) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -19,7 +19,7 @@ public class MyProtoBuffServer {
             bootstrap.group(bossGroup, workGroup)
                     .channel(NioServerSocketChannel.class)
                     .handler(new LoggingHandler(LogLevel.INFO))
-                    .childHandler(new MyProtoBufferInitializer());
+                    .childHandler(new TwoProtoBuffInitializer());
 
             ChannelFuture future = bootstrap.bind(8989).sync();
             future.channel().closeFuture().sync();

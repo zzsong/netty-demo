@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package com.zzsong.netty.protobuff;
+package com.zzsong.netty.protobuff.one;
 
 option optimize_for = SPEED ;
-option java_package = "com.zzsong.netty.protobuff";
+option java_package = "com.zzsong.netty.protobuff.one";
 option java_outer_classname = "DataInfo";
 
 message Student {

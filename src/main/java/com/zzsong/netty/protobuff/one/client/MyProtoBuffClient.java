@@ -1,4 +1,4 @@
-package com.zzsong.netty.protobuff.client;
+package com.zzsong.netty.protobuff.one.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

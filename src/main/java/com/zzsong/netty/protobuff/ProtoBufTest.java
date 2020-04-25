@@ -1,6 +1,7 @@
 package com.zzsong.netty.protobuff;
 
 import com.google.protobuf.InvalidProtocolBufferException;
+import com.zzsong.netty.protobuff.one.DataInfo;
 
 public class ProtoBufTest {
 

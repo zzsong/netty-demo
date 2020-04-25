@@ -1,6 +1,6 @@
-package com.zzsong.netty.protobuff.server;
+package com.zzsong.netty.protobuff.one.server;
 
-import com.zzsong.netty.protobuff.DataInfo;
+import com.zzsong.netty.protobuff.one.DataInfo;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
