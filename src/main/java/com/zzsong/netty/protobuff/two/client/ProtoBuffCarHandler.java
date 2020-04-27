@@ -4,7 +4,7 @@ import com.zzsong.netty.protobuff.two.ProtoData;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
-public class TwoProtoBuffClientHandler extends SimpleChannelInboundHandler<ProtoData.MyDataInfo> {
+public class ProtoBuffCarHandler extends SimpleChannelInboundHandler<ProtoData.MyDataInfo> {
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, ProtoData.MyDataInfo msg) throws Exception {
 

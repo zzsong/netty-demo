@@ -19,6 +19,9 @@ public class TwoProtoBuffClientInitializer extends ChannelInitializer<SocketChan
         pipeline.addLast(new ProtobufVarint32FrameDecoder());
         pipeline.addLast(new ProtobufVarint32LengthFieldPrepender());
 
-        pipeline.addLast(new TwoProtoBuffClientHandler());
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>");
+        pipeline.addLast(new ProtoBuffPersonHandler());
+        pipeline.addLast(new ProtoBuffDogHandler());
+        pipeline.addLast(new ProtoBuffCarHandler());
     }
 }
