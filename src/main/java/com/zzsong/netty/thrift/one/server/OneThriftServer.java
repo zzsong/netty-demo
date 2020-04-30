@@ -25,7 +25,7 @@ public class OneThriftServer {
         arg.transportFactory(new TFramedTransport.Factory());
         arg.processorFactory(new TProcessorFactory(processor));
 
-        //
+        //半同步半异步Server
         TServer server = new THsHaServer(arg);
         System.out.println("Thrift Server Started!");
 

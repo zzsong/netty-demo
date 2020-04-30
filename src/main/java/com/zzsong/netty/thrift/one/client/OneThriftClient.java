@@ -12,7 +12,7 @@ import org.apache.thrift.transport.TTransport;
 public class OneThriftClient {
 
     public static void main(String[] args) {
-        TTransport transport = new TFramedTransport(new TSocket("localhost",8989));
+        TTransport transport = new TFramedTransport(new TSocket("localhost",8989), 600);
         TProtocol protocol = new TCompactProtocol(transport);
         MyDataService.Client client = new MyDataService.Client(protocol);
 
