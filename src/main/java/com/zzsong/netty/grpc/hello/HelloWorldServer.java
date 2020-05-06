@@ -32,7 +32,7 @@ public final class HelloWorldServer {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\020helloworld.proto\022\033com.zzsong.netty.grp" +
       "c.hello\"\034\n\014HelloRequest\022\014\n\004name\030\001 \001(\t\"\035\n" +
       "\nHelloReply\022\017\n\007message\030\001 \001(\t2\322\001\n\007Greeter" +
@@ -53,13 +53,13 @@ public final class HelloWorldServer {
     internal_static_com_zzsong_netty_grpc_hello_HelloRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_zzsong_netty_grpc_hello_HelloRequest_descriptor,
-        new String[] { "Name", });
+        new java.lang.String[] { "Name", });
     internal_static_com_zzsong_netty_grpc_hello_HelloReply_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_zzsong_netty_grpc_hello_HelloReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_zzsong_netty_grpc_hello_HelloReply_descriptor,
-        new String[] { "Message", });
+        new java.lang.String[] { "Message", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

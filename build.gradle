@@ -9,11 +9,17 @@ version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
 repositories {
     mavenCentral()
 }
 
 protobuf {
+    generatedFilesBaseDir = "$projectDir/src" // 输出目录的根目录名，可以自己改变名字查看效果
+
     protoc {
         artifact = "com.google.protobuf:protoc:3.11.0"
     }
@@ -24,7 +30,9 @@ protobuf {
     }
     generateProtoTasks {
         all()*.plugins {
-            grpc {}
+            grpc {
+                outputSubDir = 'java' // 输出目录的子目录名，可以自己改变名字查看效果
+            }
         }
     }
 }
@@ -50,11 +58,9 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
-//task wrapper(type: Wrapper){
-//    gradleVersion = '6.3'
-////    distributionType = 'all'
-//    distributionUrl = distributionUrl.replace("bin", "all")
-//}
+wrapper {
+    gradleVersion = '6.3'
+}
 
 //sourceSets {
 //    main {
