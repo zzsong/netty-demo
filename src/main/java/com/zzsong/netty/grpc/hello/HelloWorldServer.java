@@ -24,6 +24,41 @@ public final class HelloWorldServer {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_zzsong_netty_grpc_hello_HelloReply_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_zzsong_netty_grpc_hello_StudentRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_zzsong_netty_grpc_hello_StudentRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_zzsong_netty_grpc_hello_StudentReply_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_zzsong_netty_grpc_hello_StudentReply_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_zzsong_netty_grpc_hello_CatRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_zzsong_netty_grpc_hello_CatRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_zzsong_netty_grpc_hello_CatReply_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_zzsong_netty_grpc_hello_CatReply_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_zzsong_netty_grpc_hello_CatReplyList_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_zzsong_netty_grpc_hello_CatReplyList_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_zzsong_netty_grpc_hello_PersonRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_zzsong_netty_grpc_hello_PersonRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_zzsong_netty_grpc_hello_PersonReply_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_zzsong_netty_grpc_hello_PersonReply_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -35,14 +70,28 @@ public final class HelloWorldServer {
     java.lang.String[] descriptorData = {
       "\n\020helloworld.proto\022\033com.zzsong.netty.grp" +
       "c.hello\"\034\n\014HelloRequest\022\014\n\004name\030\001 \001(\t\"\035\n" +
-      "\nHelloReply\022\017\n\007message\030\001 \001(\t2\322\001\n\007Greeter" +
-      "\022`\n\010SayHello\022).com.zzsong.netty.grpc.hel" +
-      "lo.HelloRequest\032\'.com.zzsong.netty.grpc." +
-      "hello.HelloReply\"\000\022e\n\rSayHelloAgain\022).co" +
-      "m.zzsong.netty.grpc.hello.HelloRequest\032\'" +
-      ".com.zzsong.netty.grpc.hello.HelloReply\"" +
-      "\000B3\n\033com.zzsong.netty.grpc.helloB\020HelloW" +
-      "orldServerH\001P\001b\006proto3"
+      "\nHelloReply\022\017\n\007message\030\001 \001(\t\"\036\n\016StudentR" +
+      "equest\022\014\n\004name\030\001 \001(\t\"7\n\014StudentReply\022\014\n\004" +
+      "name\030\001 \001(\t\022\013\n\003age\030\002 \001(\005\022\014\n\004city\030\003 \001(\t\"\036\n" +
+      "\nCatRequest\022\020\n\010category\030\001 \001(\t\"7\n\010CatRepl" +
+      "y\022\020\n\010category\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n\003age" +
+      "\030\003 \001(\005\"G\n\014CatReplyList\0227\n\010catReply\030\001 \003(\013" +
+      "2%.com.zzsong.netty.grpc.hello.CatReply\"" +
+      "\034\n\rPersonRequest\022\013\n\003sex\030\001 \001(\005\"(\n\013PersonR" +
+      "eply\022\014\n\004name\030\001 \001(\t\022\013\n\003sex\030\002 \001(\t2\275\003\n\007Gree" +
+      "ter\022`\n\010SayHello\022).com.zzsong.netty.grpc." +
+      "hello.HelloRequest\032\'.com.zzsong.netty.gr" +
+      "pc.hello.HelloReply\"\000\022p\n\022GetStudentFromN" +
+      "ame\022+.com.zzsong.netty.grpc.hello.Studen" +
+      "tRequest\032).com.zzsong.netty.grpc.hello.S" +
+      "tudentReply\"\0000\001\022h\n\022GetCatFromCategory\022\'." +
+      "com.zzsong.netty.grpc.hello.CatRequest\032%" +
+      ".com.zzsong.netty.grpc.hello.CatReply\"\000(" +
+      "\001\022t\n\026GetPersonFromSexBiTalk\022*.com.zzsong" +
+      ".netty.grpc.hello.PersonRequest\032(.com.zz" +
+      "song.netty.grpc.hello.PersonReply\"\000(\0010\001B" +
+      "3\n\033com.zzsong.netty.grpc.helloB\020HelloWor" +
+      "ldServerH\001P\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -60,6 +109,48 @@ public final class HelloWorldServer {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_zzsong_netty_grpc_hello_HelloReply_descriptor,
         new java.lang.String[] { "Message", });
+    internal_static_com_zzsong_netty_grpc_hello_StudentRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_zzsong_netty_grpc_hello_StudentRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_zzsong_netty_grpc_hello_StudentRequest_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_com_zzsong_netty_grpc_hello_StudentReply_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_zzsong_netty_grpc_hello_StudentReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_zzsong_netty_grpc_hello_StudentReply_descriptor,
+        new java.lang.String[] { "Name", "Age", "City", });
+    internal_static_com_zzsong_netty_grpc_hello_CatRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_com_zzsong_netty_grpc_hello_CatRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_zzsong_netty_grpc_hello_CatRequest_descriptor,
+        new java.lang.String[] { "Category", });
+    internal_static_com_zzsong_netty_grpc_hello_CatReply_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_zzsong_netty_grpc_hello_CatReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_zzsong_netty_grpc_hello_CatReply_descriptor,
+        new java.lang.String[] { "Category", "Name", "Age", });
+    internal_static_com_zzsong_netty_grpc_hello_CatReplyList_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_com_zzsong_netty_grpc_hello_CatReplyList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_zzsong_netty_grpc_hello_CatReplyList_descriptor,
+        new java.lang.String[] { "CatReply", });
+    internal_static_com_zzsong_netty_grpc_hello_PersonRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_com_zzsong_netty_grpc_hello_PersonRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_zzsong_netty_grpc_hello_PersonRequest_descriptor,
+        new java.lang.String[] { "Sex", });
+    internal_static_com_zzsong_netty_grpc_hello_PersonReply_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_com_zzsong_netty_grpc_hello_PersonReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_zzsong_netty_grpc_hello_PersonReply_descriptor,
+        new java.lang.String[] { "Name", "Sex", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

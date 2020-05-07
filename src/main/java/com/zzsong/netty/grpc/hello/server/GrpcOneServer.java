@@ -17,6 +17,11 @@ public class GrpcOneServer {
 
         System.out.println("  ====service starter ======");
 
+        //
+        Runtime.getRuntime().addShutdownHook(new Thread(()->{
+            System.out.println("关闭jvm");
+            GrpcOneServer.this.stop();
+        }));
     }
 
     private void stop(){

@@ -61,35 +61,97 @@ public final class GreeterGrpc {
     return getSayHelloMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.HelloRequest,
-      com.zzsong.netty.grpc.hello.HelloReply> getSayHelloAgainMethod;
+  private static volatile io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.StudentRequest,
+      com.zzsong.netty.grpc.hello.StudentReply> getGetStudentFromNameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SayHelloAgain",
-      requestType = com.zzsong.netty.grpc.hello.HelloRequest.class,
-      responseType = com.zzsong.netty.grpc.hello.HelloReply.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.HelloRequest,
-      com.zzsong.netty.grpc.hello.HelloReply> getSayHelloAgainMethod() {
-    io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.HelloRequest, com.zzsong.netty.grpc.hello.HelloReply> getSayHelloAgainMethod;
-    if ((getSayHelloAgainMethod = GreeterGrpc.getSayHelloAgainMethod) == null) {
+      fullMethodName = SERVICE_NAME + '/' + "GetStudentFromName",
+      requestType = com.zzsong.netty.grpc.hello.StudentRequest.class,
+      responseType = com.zzsong.netty.grpc.hello.StudentReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.StudentRequest,
+      com.zzsong.netty.grpc.hello.StudentReply> getGetStudentFromNameMethod() {
+    io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.StudentRequest, com.zzsong.netty.grpc.hello.StudentReply> getGetStudentFromNameMethod;
+    if ((getGetStudentFromNameMethod = GreeterGrpc.getGetStudentFromNameMethod) == null) {
       synchronized (GreeterGrpc.class) {
-        if ((getSayHelloAgainMethod = GreeterGrpc.getSayHelloAgainMethod) == null) {
-          GreeterGrpc.getSayHelloAgainMethod = getSayHelloAgainMethod =
-              io.grpc.MethodDescriptor.<com.zzsong.netty.grpc.hello.HelloRequest, com.zzsong.netty.grpc.hello.HelloReply>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SayHelloAgain"))
+        if ((getGetStudentFromNameMethod = GreeterGrpc.getGetStudentFromNameMethod) == null) {
+          GreeterGrpc.getGetStudentFromNameMethod = getGetStudentFromNameMethod =
+              io.grpc.MethodDescriptor.<com.zzsong.netty.grpc.hello.StudentRequest, com.zzsong.netty.grpc.hello.StudentReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStudentFromName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.zzsong.netty.grpc.hello.HelloRequest.getDefaultInstance()))
+                  com.zzsong.netty.grpc.hello.StudentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.zzsong.netty.grpc.hello.HelloReply.getDefaultInstance()))
-              .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHelloAgain"))
+                  com.zzsong.netty.grpc.hello.StudentReply.getDefaultInstance()))
+              .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("GetStudentFromName"))
               .build();
         }
       }
     }
-    return getSayHelloAgainMethod;
+    return getGetStudentFromNameMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.CatRequest,
+      com.zzsong.netty.grpc.hello.CatReply> getGetCatFromCategoryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCatFromCategory",
+      requestType = com.zzsong.netty.grpc.hello.CatRequest.class,
+      responseType = com.zzsong.netty.grpc.hello.CatReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.CatRequest,
+      com.zzsong.netty.grpc.hello.CatReply> getGetCatFromCategoryMethod() {
+    io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.CatRequest, com.zzsong.netty.grpc.hello.CatReply> getGetCatFromCategoryMethod;
+    if ((getGetCatFromCategoryMethod = GreeterGrpc.getGetCatFromCategoryMethod) == null) {
+      synchronized (GreeterGrpc.class) {
+        if ((getGetCatFromCategoryMethod = GreeterGrpc.getGetCatFromCategoryMethod) == null) {
+          GreeterGrpc.getGetCatFromCategoryMethod = getGetCatFromCategoryMethod =
+              io.grpc.MethodDescriptor.<com.zzsong.netty.grpc.hello.CatRequest, com.zzsong.netty.grpc.hello.CatReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCatFromCategory"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.zzsong.netty.grpc.hello.CatRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.zzsong.netty.grpc.hello.CatReply.getDefaultInstance()))
+              .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("GetCatFromCategory"))
+              .build();
+        }
+      }
+    }
+    return getGetCatFromCategoryMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.PersonRequest,
+      com.zzsong.netty.grpc.hello.PersonReply> getGetPersonFromSexBiTalkMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPersonFromSexBiTalk",
+      requestType = com.zzsong.netty.grpc.hello.PersonRequest.class,
+      responseType = com.zzsong.netty.grpc.hello.PersonReply.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.PersonRequest,
+      com.zzsong.netty.grpc.hello.PersonReply> getGetPersonFromSexBiTalkMethod() {
+    io.grpc.MethodDescriptor<com.zzsong.netty.grpc.hello.PersonRequest, com.zzsong.netty.grpc.hello.PersonReply> getGetPersonFromSexBiTalkMethod;
+    if ((getGetPersonFromSexBiTalkMethod = GreeterGrpc.getGetPersonFromSexBiTalkMethod) == null) {
+      synchronized (GreeterGrpc.class) {
+        if ((getGetPersonFromSexBiTalkMethod = GreeterGrpc.getGetPersonFromSexBiTalkMethod) == null) {
+          GreeterGrpc.getGetPersonFromSexBiTalkMethod = getGetPersonFromSexBiTalkMethod =
+              io.grpc.MethodDescriptor.<com.zzsong.netty.grpc.hello.PersonRequest, com.zzsong.netty.grpc.hello.PersonReply>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPersonFromSexBiTalk"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.zzsong.netty.grpc.hello.PersonRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.zzsong.netty.grpc.hello.PersonReply.getDefaultInstance()))
+              .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("GetPersonFromSexBiTalk"))
+              .build();
+        }
+      }
+    }
+    return getGetPersonFromSexBiTalkMethod;
   }
 
   /**
@@ -154,13 +216,24 @@ public final class GreeterGrpc {
     }
 
     /**
-     * <pre>
-     * Sends another greeting
-     * </pre>
      */
-    public void sayHelloAgain(com.zzsong.netty.grpc.hello.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.HelloReply> responseObserver) {
-      asyncUnimplementedUnaryCall(getSayHelloAgainMethod(), responseObserver);
+    public void getStudentFromName(com.zzsong.netty.grpc.hello.StudentRequest request,
+        io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.StudentReply> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetStudentFromNameMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.CatRequest> getCatFromCategory(
+        io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.CatReply> responseObserver) {
+      return asyncUnimplementedStreamingCall(getGetCatFromCategoryMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.PersonRequest> getPersonFromSexBiTalk(
+        io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.PersonReply> responseObserver) {
+      return asyncUnimplementedStreamingCall(getGetPersonFromSexBiTalkMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -173,12 +246,26 @@ public final class GreeterGrpc {
                 com.zzsong.netty.grpc.hello.HelloReply>(
                   this, METHODID_SAY_HELLO)))
           .addMethod(
-            getSayHelloAgainMethod(),
-            asyncUnaryCall(
+            getGetStudentFromNameMethod(),
+            asyncServerStreamingCall(
               new MethodHandlers<
-                com.zzsong.netty.grpc.hello.HelloRequest,
-                com.zzsong.netty.grpc.hello.HelloReply>(
-                  this, METHODID_SAY_HELLO_AGAIN)))
+                com.zzsong.netty.grpc.hello.StudentRequest,
+                com.zzsong.netty.grpc.hello.StudentReply>(
+                  this, METHODID_GET_STUDENT_FROM_NAME)))
+          .addMethod(
+            getGetCatFromCategoryMethod(),
+            asyncClientStreamingCall(
+              new MethodHandlers<
+                com.zzsong.netty.grpc.hello.CatRequest,
+                com.zzsong.netty.grpc.hello.CatReply>(
+                  this, METHODID_GET_CAT_FROM_CATEGORY)))
+          .addMethod(
+            getGetPersonFromSexBiTalkMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                com.zzsong.netty.grpc.hello.PersonRequest,
+                com.zzsong.netty.grpc.hello.PersonReply>(
+                  this, METHODID_GET_PERSON_FROM_SEX_BI_TALK)))
           .build();
     }
   }
@@ -212,14 +299,27 @@ public final class GreeterGrpc {
     }
 
     /**
-     * <pre>
-     * Sends another greeting
-     * </pre>
      */
-    public void sayHelloAgain(com.zzsong.netty.grpc.hello.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.HelloReply> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getSayHelloAgainMethod(), getCallOptions()), request, responseObserver);
+    public void getStudentFromName(com.zzsong.netty.grpc.hello.StudentRequest request,
+        io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.StudentReply> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getGetStudentFromNameMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.CatRequest> getCatFromCategory(
+        io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.CatReply> responseObserver) {
+      return asyncClientStreamingCall(
+          getChannel().newCall(getGetCatFromCategoryMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.PersonRequest> getPersonFromSexBiTalk(
+        io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.PersonReply> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getGetPersonFromSexBiTalkMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -251,13 +351,11 @@ public final class GreeterGrpc {
     }
 
     /**
-     * <pre>
-     * Sends another greeting
-     * </pre>
      */
-    public com.zzsong.netty.grpc.hello.HelloReply sayHelloAgain(com.zzsong.netty.grpc.hello.HelloRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getSayHelloAgainMethod(), getCallOptions(), request);
+    public java.util.Iterator<com.zzsong.netty.grpc.hello.StudentReply> getStudentFromName(
+        com.zzsong.netty.grpc.hello.StudentRequest request) {
+      return blockingServerStreamingCall(
+          getChannel(), getGetStudentFromNameMethod(), getCallOptions(), request);
     }
   }
 
@@ -288,21 +386,12 @@ public final class GreeterGrpc {
       return futureUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * Sends another greeting
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.zzsong.netty.grpc.hello.HelloReply> sayHelloAgain(
-        com.zzsong.netty.grpc.hello.HelloRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getSayHelloAgainMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_SAY_HELLO = 0;
-  private static final int METHODID_SAY_HELLO_AGAIN = 1;
+  private static final int METHODID_GET_STUDENT_FROM_NAME = 1;
+  private static final int METHODID_GET_CAT_FROM_CATEGORY = 2;
+  private static final int METHODID_GET_PERSON_FROM_SEX_BI_TALK = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -325,9 +414,9 @@ public final class GreeterGrpc {
           serviceImpl.sayHello((com.zzsong.netty.grpc.hello.HelloRequest) request,
               (io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.HelloReply>) responseObserver);
           break;
-        case METHODID_SAY_HELLO_AGAIN:
-          serviceImpl.sayHelloAgain((com.zzsong.netty.grpc.hello.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.HelloReply>) responseObserver);
+        case METHODID_GET_STUDENT_FROM_NAME:
+          serviceImpl.getStudentFromName((com.zzsong.netty.grpc.hello.StudentRequest) request,
+              (io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.StudentReply>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -339,6 +428,12 @@ public final class GreeterGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET_CAT_FROM_CATEGORY:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getCatFromCategory(
+              (io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.CatReply>) responseObserver);
+        case METHODID_GET_PERSON_FROM_SEX_BI_TALK:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getPersonFromSexBiTalk(
+              (io.grpc.stub.StreamObserver<com.zzsong.netty.grpc.hello.PersonReply>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -391,7 +486,9 @@ public final class GreeterGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GreeterFileDescriptorSupplier())
               .addMethod(getSayHelloMethod())
-              .addMethod(getSayHelloAgainMethod())
+              .addMethod(getGetStudentFromNameMethod())
+              .addMethod(getGetCatFromCategoryMethod())
+              .addMethod(getGetPersonFromSexBiTalkMethod())
               .build();
         }
       }

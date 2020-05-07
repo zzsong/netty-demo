@@ -3,6 +3,7 @@ package com.zzsong.netty.grpc.hello.client;
 import com.zzsong.netty.grpc.hello.GreeterGrpc;
 import com.zzsong.netty.grpc.hello.HelloReply;
 import com.zzsong.netty.grpc.hello.HelloRequest;
+import com.zzsong.netty.grpc.hello.StudentRequest;
 import io.grpc.Channel;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -65,7 +66,6 @@ public class GreeterClient {
             return;
         }
         logger.info("接收Greeting: " + response.getMessage());
-        System.out.println("返回消息： "+response.getMessage());
     }
 
 }
