@@ -1,0 +1,6 @@
+hello world, welcome
+欢迎光临
+这是深圳
+shenzhen
+
+end
