@@ -1,0 +1,11 @@
+
+段总结
+
+EventLoopGroup bossGroup = new NioEventLoopGroup();
+EventLoopGroup workGroup = new NioEventLoopGroup();
+bossGroup： 主要接收
+workGroup： 处理
+
+ServerBootstrap
+辅助封装类，将netty相关的接口方法都封装，简化服务创建工作的对象。
+
